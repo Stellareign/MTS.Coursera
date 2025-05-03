@@ -12,12 +12,13 @@ import org.springframework.stereotype.Service;
 public class RegisterServiceImpl implements RegisterService {
 
     private final UserRepository userRepository;
+    private final UserService userService;
 
+    @Override
     public boolean registerUser(UserRegisterDTO userRegisterDTO) {
         if (userRepository.findByUsername(userRegisterDTO.getName()) != null) {
             return false;
         }
-        userService.saveRegisterUser(register);
-        return true;
+        return userService.saveRegisterUser(userRegisterDTO);
     }
 }

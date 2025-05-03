@@ -1,11 +1,12 @@
 package org.application.entity;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
-
+@Entity
 public class addUser {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

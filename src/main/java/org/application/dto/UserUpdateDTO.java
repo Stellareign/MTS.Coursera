@@ -16,9 +16,7 @@ public class UserUpdateDTO {
 
     private String login;
 
-@Em
     private String email;
-
 
     private String phone;
 

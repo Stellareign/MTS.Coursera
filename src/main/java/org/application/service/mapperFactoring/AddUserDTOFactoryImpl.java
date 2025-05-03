@@ -7,13 +7,14 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class AddUserDTOFactoryImpl implements UserDTOFactoy {
+public class AddUserDTOFactoryImpl implements UserDTOFactory {
     /**
      * Создание нового юзера
      * @param newUser
      * @return User
      */
-    public User addNewUserFromDTO(UserRegisterDTO newUser){
+    @Override
+    public User createNewUserFromRegisterDto (UserRegisterDTO newUser){
         return new User (newUser.getLogin(), newUser.getPassword(), newUser.getPassword(),
                 newUser.getPhone(), newUser.getName(), newUser.getSurname());
     }
