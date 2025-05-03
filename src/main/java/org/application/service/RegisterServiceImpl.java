@@ -16,7 +16,7 @@ public class RegisterServiceImpl implements RegisterService {
 
     @Override
     public boolean registerUser(UserRegisterDTO userRegisterDTO) {
-        if (userRepository.findByUsername(userRegisterDTO.getName()) != null) {
+        if (userRepository.findByName(userRegisterDTO.getName()) != null) {
             return false;
         }
         return userService.saveRegisterUser(userRegisterDTO);
