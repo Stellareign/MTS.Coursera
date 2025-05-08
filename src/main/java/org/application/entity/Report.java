@@ -21,7 +21,7 @@ public class Report {
     private Course course;
     private int rateOfCourse;
     private List<User> users;
-    private int  assessment;
+    private int  assessment; // рейтинг
 
     @Override
     public boolean equals(Object o) {

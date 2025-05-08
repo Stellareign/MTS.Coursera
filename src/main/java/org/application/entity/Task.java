@@ -37,8 +37,8 @@ public class Task {
     private String videoContent;
     private String docContent;
     private String audioContent;
-    private List<Group> groups;
-    private List<Course>courses;
+//    private List<Group> groups;
+//    private List<Course>courses;
     private String chat;
 
     //*************************************************************

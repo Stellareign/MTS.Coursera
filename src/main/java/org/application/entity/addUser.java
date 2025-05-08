@@ -6,7 +6,13 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
+import lombok.*;
+
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Data
 public class addUser {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
